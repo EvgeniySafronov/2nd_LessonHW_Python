@@ -2,11 +2,14 @@
 Найдите произведение элементов на указанных пользователем через пробел позициях. """
 
 n = int(input('Введите число N: '))
-
-my_list = list(range(-n, n+1))
-print(my_list, end=' ')
 prod = 1
-pr_num = (input('Введите числа через пробел '))
+my_list = list(range(-n, n+1))
+print(my_list)
+
+pr_num = input('Введите числа через пробел ')
 print(pr_num.split())
-
-
+pr_num: int
+for i in pr_num:
+    prod *= my_list[i]
+   
+print(prod)
